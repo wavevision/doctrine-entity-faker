@@ -1,0 +1,42 @@
+{
+  "name": "wavevision/doctrine-entity-faker",
+  "type": "library",
+  "description": "",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Wavevision s.r.o.",
+      "email": "info@wavevision.com"
+    },
+    {
+      "name": "Jakub Filla",
+      "email": "jakub.filla@wavevision.com"
+    },
+    {
+      "name": "Vít Rozsíval",
+      "email": "vit@wavevision.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Wavevision\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Wavevision\\": "tests/"
+    }
+  },
+  "require": {
+    "doctrine/annotations": "^1.8",
+    "fzaninotto/faker": "^1.8"
+  },
+  "require-dev": {
+    "wavevision/coding-standard": "^1.1",
+    "phpunit/phpunit": "^8.4",
+    "phpstan/phpstan": "^0.11.19",
+    "phing/phing": "^2.16",
+    "jakub-onderka/php-parallel-lint": "^1.0",
+    "php-coveralls/php-coveralls": "^2.1"
+  }
+}
