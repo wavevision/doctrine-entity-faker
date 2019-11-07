@@ -46,6 +46,12 @@ class EntityB
 
 	/**
 	 * @var string
+	 * @ORM\Column(type="string", length=2)
+	 */
+	public $shortString;
+
+	/**
+	 * @var string
 	 * @ORM\Column(type="text")
 	 */
 	public $text;

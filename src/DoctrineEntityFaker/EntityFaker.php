@@ -44,6 +44,11 @@ class EntityFaker
 		return $instance;
 	}
 
+	public function getConfiguration(): Configuration
+	{
+		return $this->configuration;
+	}
+
 	/**
 	 * @return mixed
 	 */

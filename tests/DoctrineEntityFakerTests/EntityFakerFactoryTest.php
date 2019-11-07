@@ -4,6 +4,7 @@ namespace Wavevision\DoctrineEntityFakerTests;
 
 use DateTime;
 use PHPStan\Testing\TestCase;
+use Wavevision\DoctrineEntityFaker\Configuration;
 use Wavevision\DoctrineEntityFaker\EntityFaker;
 use Wavevision\DoctrineEntityFaker\EntityFakerFactory;
 use Wavevision\DoctrineEntityFakerTests\Entities\EntityB;
@@ -17,12 +18,14 @@ class EntityFakerFactoryTest extends TestCase
 		$this->assertInstanceOf(EntityFaker::class, $faker);
 		/** @var EntityB $entity */
 		$entity = $faker->create(EntityB::class);
+		$this->assertInstanceOf(Configuration::class, $faker->getConfiguration());
 		$this->assertIsBool($entity->boolean);
 		$this->assertIsFloat($entity->float);
 		$this->assertIsInt($entity->integer);
 		$this->assertIsString($entity->decimal);
 		$this->assertInstanceOf(DateTime::class, $entity->datetime);
 		$this->assertIsString($entity->string);
+		$this->assertIsString($entity->shortString);
 		$this->assertIsString($entity->text);
 	}
 

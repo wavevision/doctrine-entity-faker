@@ -32,6 +32,10 @@ class ConfigurationFactory
 				return $faker->dateTime;
 			},
 			Types::STRING => function (Column $column) use ($faker) {
+				$length = $column->length;
+				if ($length <= 10) {
+					return substr(md5((string)mt_rand()), 0, $length);
+				}
 				return $faker->text($column->length ?? 255);
 			},
 			Types::TEXT => function () use ($faker) {
