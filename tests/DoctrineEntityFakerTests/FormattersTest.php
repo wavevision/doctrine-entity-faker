@@ -10,9 +10,8 @@ class FormattersTest extends TestCase
 
 	public function testDecimal(): void
 	{
-		$this->assertSame('3.14', Formatters::decimal(3.1415, 12, 2));
-		$this->assertSame('2458', Formatters::decimal(299792458.00, 4, 0));
-		$this->assertSame('58.00', Formatters::decimal(299792458.00, 4, 2));
+		$this->assertSame('3.14', Formatters::decimal(3.1415, 2));
+		$this->assertSame('3', Formatters::decimal(3.1415, 0));
 	}
 
 }
