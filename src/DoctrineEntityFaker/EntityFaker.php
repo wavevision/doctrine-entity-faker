@@ -24,8 +24,16 @@ class EntityFaker
 	 */
 	public function create(string $class)
 	{
-		$reflection = $this->reflection($class);
-		$instance = new $class();
+		return $this->updateInstance(new $class());
+	}
+
+	/**
+	 * @param mixed $instance
+	 * @return mixed
+	 */
+	public function updateInstance($instance)
+	{
+		$reflection = $this->reflection(get_class($instance));
 		foreach ($reflection->getProperties() as $property) {
 			if ($property->isStatic()) {
 				continue;
