@@ -3,19 +3,20 @@
 namespace Wavevision\DoctrineEntityFaker;
 
 use Doctrine\Common\Annotations\Reader;
+use Nette\SmartObject;
+use function array_unshift;
 
 class Configuration
 {
 
-	/**
-	 * @var Reader
-	 */
-	private $reader;
+	use SmartObject;
+
+	private Reader $reader;
 
 	/**
 	 * @var Mapper[]
 	 */
-	private $mappers;
+	private array $mappers;
 
 	/**
 	 * @param Mapper[] $mappers

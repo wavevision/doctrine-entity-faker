@@ -1,4 +1,6 @@
 <?php declare(strict_types = 1);
 
+use Doctrine\Common\Annotations\AnnotationRegistry;
+
 require __DIR__ . '/../vendor/autoload.php';
-\Doctrine\Common\Annotations\AnnotationRegistry::registerLoader('class_exists');
+AnnotationRegistry::registerLoader('class_exists');

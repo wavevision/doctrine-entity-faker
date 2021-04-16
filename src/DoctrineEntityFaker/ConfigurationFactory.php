@@ -6,9 +6,15 @@ use Doctrine\Common\Annotations\AnnotationReader;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping\Column;
 use Faker\Factory;
+use Nette\SmartObject;
+use function md5;
+use function mt_rand;
+use function substr;
 
 class ConfigurationFactory
 {
+
+	use SmartObject;
 
 	public function create(): Configuration
 	{

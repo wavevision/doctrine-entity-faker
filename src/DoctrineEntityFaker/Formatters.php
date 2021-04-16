@@ -2,8 +2,13 @@
 
 namespace Wavevision\DoctrineEntityFaker;
 
+use Nette\StaticClass;
+use function number_format;
+
 class Formatters
 {
+
+	use StaticClass;
 
 	public static function decimal(float $number, int $scale): string
 	{

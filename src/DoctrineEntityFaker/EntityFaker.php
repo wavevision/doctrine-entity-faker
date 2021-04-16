@@ -3,16 +3,17 @@
 namespace Wavevision\DoctrineEntityFaker;
 
 use Doctrine\ORM\Mapping\Column;
+use Nette\SmartObject;
 use ReflectionClass;
 use ReflectionProperty;
+use function get_class;
 
 class EntityFaker
 {
 
-	/**
-	 * @var Configuration
-	 */
-	private $configuration;
+	use SmartObject;
+
+	private Configuration $configuration;
 
 	public function __construct(Configuration $configuration)
 	{
@@ -75,6 +76,10 @@ class EntityFaker
 		return null;
 	}
 
+	/**
+	 * @param class-string<mixed> $class
+	 * @return ReflectionClass<object>
+	 */
 	private function reflection(string $class): ReflectionClass
 	{
 		return new ReflectionClass($class);

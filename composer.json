@@ -27,24 +27,22 @@
       "Wavevision\\": "tests/"
     }
   },
+  "config": {
+    "sort-packages": true
+  },
   "require": {
-    "php": ">=7.2",
+    "php": ">=7.4",
     "doctrine/annotations": "^1.8",
     "doctrine/orm": "^2.6",
-    "fzaninotto/faker": "^1.8"
+    "fzaninotto/faker": "^1.8",
+    "nette/utils": "^3.2"
   },
   "require-dev": {
-    "wavevision/coding-standard": "^1.1",
-    "phpunit/phpunit": "^8.4",
-    "phpstan/phpstan": "^0.11.19",
-    "phing/phing": "^2.16",
-    "jakub-onderka/php-parallel-lint": "^1.0",
     "php-coveralls/php-coveralls": "^2.1",
-    "phpstan/phpstan-doctrine": "^0.11.6",
-    "phpstan/extension-installer": "^1.0"
-  },
-  "scripts": {
-    "phing": "phing"
+    "phpstan/extension-installer": "^1.0",
+    "phpstan/phpstan-doctrine": "^0.12.33",
+    "phpunit/phpunit": "^9.5",
+    "wavevision/coding-standard": "^6.0"
   },
   "extra": {
     "phpstan": {}

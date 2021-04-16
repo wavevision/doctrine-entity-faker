@@ -2,8 +2,12 @@
 
 namespace Wavevision\DoctrineEntityFaker;
 
+use Nette\SmartObject;
+
 class Mapper
 {
+
+	use SmartObject;
 
 	/**
 	 * @var callable

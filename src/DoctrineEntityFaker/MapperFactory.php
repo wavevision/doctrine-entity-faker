@@ -4,6 +4,7 @@ namespace Wavevision\DoctrineEntityFaker;
 
 use Doctrine\ORM\Mapping\Column;
 use Nette\SmartObject;
+use function in_array;
 
 class MapperFactory
 {

@@ -4,42 +4,40 @@ namespace Wavevision\DoctrineEntityFakerTests\Entities;
 
 use Doctrine\ORM\Mapping as ORM;
 
+// phpcs:disable SlevomatCodingStandard.Classes.UnusedPrivateElements.UnusedProperty
 class EntityA
 {
 
 	/**
 	 * @var int - skip this
 	 */
-	private static $static;
+	private static int $static;
 
 	/**
 	 * @var int - skip this
 	 */
-	private $noAnnotation;
+	private int $noAnnotation;
 
 	/**
 	 * @var string - skip this
 	 * @ORM\Column(type="invalidType")
 	 */
-	private $invalidType;
+	private string $invalidType;
 
 	/**
-	 * @var string
 	 * @ORM\Column(type="string")
 	 */
-	private $string;
+	private string $string;
 
 	/**
-	 * @var int
 	 * @ORM\Column(type="integer")
 	 */
-	private $integer;
+	private ?int $integer = null;
 
 	/**
-	 * @var bool
 	 * @ORM\Column(type="boolean")
 	 */
-	private $boolean;
+	private bool $boolean;
 
 	public function getString(): ?string
 	{

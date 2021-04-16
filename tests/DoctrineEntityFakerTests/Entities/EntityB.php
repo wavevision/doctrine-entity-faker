@@ -9,57 +9,48 @@ class EntityB
 {
 
 	/**
-	 * @var bool
 	 * @ORM\Column(type="boolean")
 	 */
-	public $boolean;
+	public bool $boolean;
 
 	/**
-	 * @var float
 	 * @ORM\Column(type="float")
 	 */
-	public $float;
+	public float $float;
 
 	/**
-	 * @var int
 	 * @ORM\Column(type="integer")
 	 */
-	public $integer;
+	public int $integer;
 
 	/**
-	 * @var string
 	 * @ORM\Column(type="decimal", precision=12, scale=2)
 	 */
-	public $decimal;
+	public string $decimal;
 
 	/**
-	 * @var DateTime
 	 * @ORM\Column(type="datetime")
 	 */
-	public $datetime;
+	public DateTime $datetime;
 
 	/**
-	 * @var string
 	 * @ORM\Column(type="string", length=20)
 	 */
-	public $string;
+	public string $string;
 
 	/**
-	 * @var string
 	 * @ORM\Column(type="string")
 	 */
-	public $stringDefaultLength;
+	public string $stringDefaultLength;
 
 	/**
-	 * @var string
 	 * @ORM\Column(type="string", length=2)
 	 */
-	public $shortString;
+	public string $shortString;
 
 	/**
-	 * @var string
 	 * @ORM\Column(type="text")
 	 */
-	public $text;
+	public string $text;
 
 }
