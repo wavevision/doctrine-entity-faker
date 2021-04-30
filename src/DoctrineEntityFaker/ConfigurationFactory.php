@@ -32,7 +32,10 @@ class ConfigurationFactory
 				return $faker->numberBetween(1, 4200);
 			},
 			Types::DECIMAL => function (Column $column) use ($faker) {
-				return Formatters::decimal($faker->randomFloat(), $column->precision);
+				return Formatters::decimal(
+					$faker->randomFloat($column->scale, 0, ($column->precision - $column->scale) * 10 - 1),
+					$column->scale
+				);
 			},
 			Types::DATETIME_MUTABLE => function () use ($faker) {
 				return $faker->dateTime;

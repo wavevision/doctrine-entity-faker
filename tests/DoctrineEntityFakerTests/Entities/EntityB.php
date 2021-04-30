@@ -24,7 +24,7 @@ class EntityB
 	public int $integer;
 
 	/**
-	 * @ORM\Column(type="decimal", precision=12, scale=2)
+	 * @ORM\Column(type="decimal", precision=3, scale=2)
 	 */
 	public string $decimal;
 
